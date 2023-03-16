@@ -7,6 +7,11 @@
 */
 
 int main(void)
+/**
+* Main function
+*
+* Return: Always 0
+*/
 {
 
 	char str[64] = "\"Programming is like building a multilingual puzzle";
