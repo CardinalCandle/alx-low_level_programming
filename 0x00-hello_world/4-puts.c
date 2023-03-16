@@ -1,7 +1,9 @@
 #include<stdio.h>
 
 /**
-* Outputs a character string using puts instead of printf.
+* Main - Outputs a character string using puts instead of printf.
+*
+* Return: Always 0
 */
 
 int main(void)
