@@ -3,7 +3,7 @@
 /**
 * main - Outputs a character string to STDERR using fprintf.
 *
-* Return: Always 0
+* Return: Always 1
 */
 int main(void)
 {
