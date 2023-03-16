@@ -8,7 +8,7 @@
 
 int main(void)
 /**
-* Main function
+* stores string in a variable then uses it
 *
 * Return: Always 0
 */
