@@ -9,8 +9,6 @@ int main(void)
 {
 
 char r[99] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-
-fprintf(stderr, "%s", r);
-
+write(2, r, 99);
 return (1);
 }
