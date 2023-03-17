@@ -7,7 +7,6 @@
 int main(void)
 {
 int i = '0';
-int h = 'a';
 while (i <= '9')
 {
 putchar(i);
