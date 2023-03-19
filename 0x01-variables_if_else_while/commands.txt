@@ -1,7 +1,7 @@
 /alx-low_level_programming/0x01-variables_if_else_while
-================================================================================
-0-positive_or_negative.c:
 
+================================================================================================================================================================
+0-positive_or_negative.c:
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
@@ -18,28 +18,20 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n == 0)
 	{
-	printf("%d is zero\n", n);
+		printf("%d is zero\n", n);
 	}
 	else if (n > 0)
 	{
-	printf("%d is positive\n", n);
+		printf("%d is positive\n", n);
 	}
 	else
 	{
-	printf("%d is negative\n", n);
+		printf("%d is negative\n", n);
 	}
 	return (0);
 }
 ================================================================================
-commands.txt:
-
-================================================================================
-README.md:
-
-/alx-low_level_programming/0x01-variables_if_else_while
-================================================================================
 1-last_digit.c:
-
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
@@ -56,23 +48,22 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	last = n % 10;
 	printf("Last digit of %d is %d", n, last);
-if (last == 0)
+	if (last == 0)
 	{
-	printf(" and is 0\n");
+		printf(" and is 0\n");
 	}
-else if (last > 5)
+	else if (last > 5)
 	{
-	printf(" and is greater than 5\n");
+		printf(" and is greater than 5\n");
 	}
-else if (last < 6)
+	else if (last < 6)
 	{
-	printf(" and is less than 6 and not 0\n");
+		printf(" and is less than 6 and not 0\n");
 	}
 	return (0);
 }
 ================================================================================
 2-print_alphabet.c:
-
 #include <stdio.h>
 /**
 * main - main entry
@@ -82,16 +73,15 @@ else if (last < 6)
 int main(void)
 {
 char c;
-for (c = 'a'; c <= 'z'; ++c)
+	for (c = 'a'; c <= 'z'; ++c)
 	{
-	putchar(c);
+		putchar(c);
 	}
 	putchar('\n');
 	return (0);
 }
 ================================================================================
 3-print_alphabets.c:
-
 #include <stdio.h>
 /**
 * main - main entry.
@@ -101,20 +91,19 @@ for (c = 'a'; c <= 'z'; ++c)
 int main(void)
 {
 char c;
-for (c = 'a'; c <= 'z'; ++c)
-{
-putchar(c);
-}
-for (c = 'A'; c <= 'Z'; ++c)
-{
-putchar(c);
-}
-putchar('\n');
-return (0);
+	for (c = 'a'; c <= 'z'; ++c)
+	{
+		putchar(c);
+	}
+	for (c = 'A'; c <= 'Z'; ++c)
+	{
+		putchar(c);
+	}
+	putchar('\n');
+	return (0);
 }
 ================================================================================
 4-print_alphabt.c:
-
 #include <stdio.h>
 /**
 * main - main entry.
@@ -123,23 +112,23 @@ return (0);
 */
 int main(void)
 {
-char c;
-for (c = 'a'; c <= 'z'; ++c)
-{
-	if (c == 'q' || c == 'e')
+	char c;
+
+	for (c = 'a'; c <= 'z'; ++c)
 	{
+		if (c == 'q' || c == 'e')
+		{
+		}
+		else
+		{
+			putchar(c);
+		}
 	}
-	else
-	{
-	putchar(c);
-	}
-}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
 ================================================================================
 5-print_numbers.c:
-
 #include <stdio.h>
 /**
 * main - main entry.
@@ -148,18 +137,18 @@ return (0);
 */
 int main(void)
 {
-int i = 0;
-while (i <= 9)
-{
-	printf("%d", i);
-	i++;
-}
-putchar('\n');
-return (0);
+	int i = 0;
+
+	while (i <= 9)
+	{
+		printf("%d", i);
+		i++;
+	}
+	putchar('\n');
+	return (0);
 }
 ================================================================================
 6-print_numberz.c:
-
 #include <stdio.h>
 /**
 * main - main entry.
@@ -168,18 +157,18 @@ return (0);
 */
 int main(void)
 {
-int i = '0';
-while (i <= '9')
-{
-	putchar(i);
-	i++;
-}
-putchar('\n');
-return (0);
+	int i = '0';
+
+	while (i <= '9')
+	{
+		putchar(i);
+		i++;
+	}
+	putchar('\n');
+	return (0);
 }
 ================================================================================
 7-print_tebahpla.c:
-
 #include <stdio.h>
 /**
 * main - main entry.
@@ -188,18 +177,18 @@ return (0);
 */
 int main(void)
 {
-int i = 'z';
-while (i >= 'a')
-{
-	putchar(i);
-	i--;
-}
-putchar('\n');
-return (0);
+	int i = 'z';
+
+	while (i >= 'a')
+	{
+		putchar(i);
+		i--;
+	}
+	putchar('\n');
+	return (0);
 }
 ================================================================================
 8-print_base16.c:
-
 #include <stdio.h>
 /**
 * main - main entry.
@@ -208,24 +197,26 @@ return (0);
 */
 int main(void)
 {
-int i = '0';
-int h = 'a';
-while (i <= '9')
-{
-	putchar(i);
-	i++;
-}
-while (h <= 'f')
-{
-	putchar(h);
-	h++;
-}
-putchar('\n');
-return (0);
+	int i = '0';
+	int h = 'a';
+
+	while (i <= '9')
+	{
+		putchar(i);
+		i++;
+	}
+
+	while (h <= 'f')
+	{
+		putchar(h);
+		h++;
+	}
+
+	putchar('\n');
+	return (0);
 }
 ================================================================================
 9-print_comb.c:
-
 #include <stdio.h>
 /**
 * main - main entry.
@@ -234,23 +225,23 @@ return (0);
 */
 int main(void)
 {
-int i = '0';
-while (i <= '9')
-{
-putchar(i);
-	if (i != '9')
+	int i = '0';
+
+	while (i <= '9')
 	{
-		putchar(',');
-		putchar(' ');
+		putchar(i);
+		if (i != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		i++;
 	}
-i++;
-}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
 ================================================================================
 100-print_comb3.c:
-
 #include <stdio.h>
 /**
 * main - main entry.
@@ -279,7 +270,6 @@ return (0);
 }
 ================================================================================
 101-print_comb4.c:
-
 #include <stdio.h>
 /**
 * main - main entry.
@@ -288,31 +278,30 @@ return (0);
 */
 int main(void)
 {
-int h, a, b;
+	int h, a, b;
 
-for (h = 0; h < 10; h++)
-{
-	for (a = h + 1; a < 10; a++)
+	for (h = 0; h < 10; h++)
 	{
-		for (b = a + 1; b < 10; b++)
+		for (a = h + 1; a < 10; a++)
 		{
-		putchar(h + '0');
-		putchar(a + '0');
-		putchar(b + '0');
-			if (h < 7 || (h == 7 && a < 8) || (h == 8 && a < 9))
+			for (b = a + 1; b < 10; b++)
 			{
-			putchar(',');
-			putchar(' ');
+				putchar(h + '0');
+				putchar(a + '0');
+				putchar(b + '0');
+				if (h < 7 || (h == 7 && a < 8) || (h == 8 && a < 9))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
-}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
 ================================================================================
 102-print_comb5.c:
-
 #include <stdio.h>
 /**
 * main - main entry.
@@ -322,32 +311,32 @@ return (0);
 
 int main(void)
 {
-int a, b;
+	int a, b;
 
-for (a = 0; a < 100; a++)
-{
-for (b = a; b < 100; b++)
-{
-int c1 = a / 10;
-int c2 = a % 10;
-int c3 = b / 10;
-int c4 = b % 10;
+	for (a = 0; a < 100; a++)
+	{
+		for (b = a; b < 100; b++)
+		{
+			int c1 = a / 10;
+			int c2 = a % 10;
+			int c3 = b / 10;
+			int c4 = b % 10;
 
-if (((c1 * 10) + c2) != ((c3 * 10) + c4))
-{
-putchar('0' + c1);
-putchar('0' + c2);
-putchar(' ');
-putchar('0' + c3);
-putchar('0' + c4);
-if (a != 98 || b != 99)
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-}
-putchar('\n');
-return (0);
+			if (((c1 * 10) + c2) != ((c3 * 10) + c4))
+			{
+				putchar('0' + c1);
+				putchar('0' + c2);
+				putchar(' ');
+				putchar('0' + c3);
+				putchar('0' + c4);
+				if (a != 98 || b != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
