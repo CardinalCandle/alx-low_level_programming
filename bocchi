@@ -1,5 +1,7 @@
 #!/bin/bash
+#
 # Fixes files that have been flagged with errors according to betty's style guide
+#
 # How to use : 	do a chmod u+x on this file and then call it from the command line
 # 		with ./bocchi followed by the name of the file you want to fix, the
 #		script will create a new file named exactly like the input file but
@@ -8,10 +10,9 @@
 #		your original filename to filename.bak or something before, so you
 #		don't accidentally remove it.
 #
-#
 # N.B.:	You are welcome to share some of the limitations of the script you've found,
 #	don't think this will work everytime or I will be liable for any accidents or
-#	any misuse whatsoever of it, I am not responsible, You have been warned,
+#	any misuse whatsoever of it, I am not responsible, You have been warned.
 #	Also, I made in like 15 min when I was sleep deprived, give me a break.
 #
 cat $1 \
