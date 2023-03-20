@@ -26,5 +26,9 @@ cat $1 \
 | sed 's/return\s*(/return (/' \
 | sed 's/(\s*/(/' \
 | sed 's/\s*)/)/' \
-| sed  's/\/\/\(.*\)/\/\*\1\*\//' > $1.lnt
+| sed  's/\/\/\(.*\)/\/\*\1\*\//'\
+| sed  's/^\*.*[Mm][Aa][Ii][Nn]/* main/' \
+| sed 's/^\*.*[Rr][Ee][Tt][Uu][Rr][Nn]/* Return:/' \
+| sed 's/^\*.*main$/* main - Entry point/' \
+| sed 's/\*.*[Rr][Ee][Tt][Uu][Rr][Nn]\:$/* Return: 0/' > $1.lnt
 echo "done, fixed file is $1.lnt"
