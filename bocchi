@@ -13,7 +13,7 @@
 # N.B.:	You are welcome to share some of the limitations of the script you've found,
 #	don't think this will work everytime or I will be liable for any accidents or
 #	any misuse whatsoever of it, I am not responsible, You have been warned.
-#	Also, I made in like 15 min when I was sleep deprived, give me a break.
+#	Also, I made it in like 15 min when I was sleep deprived, give me a break.
 #
 cat $1 \
 | sed 's/[[:space:]]*$//' \
