@@ -3,14 +3,15 @@
 /**
 *main - Outputs a character string using puts instead of printf.
 *
-* Return: Always 0
+*Return: Always 0
 */
-int main(void)
+int main (void)
 {
-	char str[64] = "\"Programming is like building a multilingual puzzle";
 
-	puts(str);
+char str[64] = "\"Programming is like building a multilingual puzzle";
+puts (str);
 
 
-	return (0);
+return (0);
 }
+/* comment*/
