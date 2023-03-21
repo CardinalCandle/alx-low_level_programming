@@ -28,11 +28,11 @@ else
 {
 if (prd < 10)
 {
-printf(", %i", prd);
+printf(",   %i", prd);
 }
 else if (prd < 100)
 {
-printf(",%i", prd);
+printf(",  %i", prd);
 }
 else
 {
