@@ -29,7 +29,7 @@ void fibonacci(void)
 	for (i = 2; i < max; i++)
 	{
 		fib = n2 + n1;
-		if (i == max)
+		if (i == max - 1)
 		{
 			printf("%.0f", fib);
 		}
