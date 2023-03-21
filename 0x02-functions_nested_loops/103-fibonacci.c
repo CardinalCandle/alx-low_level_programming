@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-void even_liber_abbaci (void);
+void even_liber_abbaci(void);
 /**
 * main - entry point
 *
 * Return: 0
 */
-int main (void)
+int main(void)
 {
-	even_liber_abbaci ();
+	even_liber_abbaci();
 	return (0);
 }
 
@@ -19,10 +19,11 @@ int main (void)
 *
 * Return: void
 */
-void even_liber_abbaci (void)
+void even_liber_abbaci(void)
 {
 	const int max = 4000000;
 	long i, n1, n2, fib, sum;
+
 	n2 = 2;
 	n1 = 1;
 	sum = n2;
@@ -36,5 +37,5 @@ void even_liber_abbaci (void)
 			sum += fib;
 		}
 	}
-	printf ("%li\n", sum);
+	printf("%li\n", sum);
 }
