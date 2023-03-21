@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-# Fixes files that have been flagged with errors according to betty's style guide
+# Fixes SOME OF THE ERRORS in files that have been flagged with errors according to
+# betty's style guide
 #
 # How to use : 	do a chmod u+x on this file and then call it from the command line
 # 		with ./bocchi followed by the name of the file you want to fix, the
