@@ -4,11 +4,17 @@
 
 /**
 * _islower - checks for lowercase characters
-*
+* @c: letter as int
 * Return: 0
 */
 int _islower(int c)
 {
-unsigned char a = (unsigned char) c;
-return (islower(a));
+if (c >= 'a' && c <= 'z')
+{
+return (1);
+}
+else
+{
+return (0);
+}
 }
