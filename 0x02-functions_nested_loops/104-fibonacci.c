@@ -37,11 +37,7 @@ void fibonacci(void)
 		fib = n2 + n1;
 		if (i == max - 1)
 		{
-			printf("%.0Lf", fib + 2);
-		}
-		if ((i == max - 2) || (i == max - 3))
-		{
-			printf("%.0Lf, ", fib + 1);
+			printf("%.0Lf", fib);
 		}
 		else
 		{
