@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 /**
 * sum_naturals - computes and prints the sum of all the multiples of
 * 3 or 5 below 1024 (excluded), followed by a new line.
@@ -18,4 +17,14 @@ void sum_naturals(void)
 		}
 	}
 	printf("%i\n", sum);
+}
+/**
+* main - entry point
+*
+* Return: 0
+*/
+int main(void)
+{
+	sum_naturals();
+	return (0);
 }
