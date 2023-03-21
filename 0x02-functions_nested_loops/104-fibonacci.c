@@ -20,12 +20,12 @@ int main(void)
 */
 void fibonacci(void)
 {
-	int c1 = 8362114348;
-	int c2 = 9848422977;
-	int d1 = 1353018523;
-	int d2 = 44706746049;
-	int e1 = 21892299583;
-	int e2 = 4555169026;
+	long double c1 = 8362114348;
+	long double c2 = 9848422977;
+	long double d1 = 1353018523;
+	long double d2 = 44706746049;
+	long double e1 = 21892299583;
+	long double e2 = 4555169026;
 	const unsigned long max = 95;
 	long double i, n1, n2, fib;
 
@@ -51,6 +51,6 @@ void fibonacci(void)
 		n2 = fib;
 		/*printf("\nFibonacci number %lu is%lu", i, fib);*/
 	}
-	printf(", %i%i, %i%i, %i%i", c1, c2, d1, d2, e1, e2);
+	printf(", %.0d%.0d, %.0d%.0d, %.0d%.0d", c1, c2, d1, d2, e1, e2);
 	putchar('\n');
 }
