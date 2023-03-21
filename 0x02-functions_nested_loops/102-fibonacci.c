@@ -8,8 +8,8 @@ void fibonacci(void);
 */
 int main(void)
 {
-fibonacci();
-return (0);
+	fibonacci();
+	return (0);
 }
 
 /**
@@ -20,23 +20,23 @@ return (0);
 */
 void fibonacci(void)
 {
-long i, n1, n2, fib;
-n2 = 2;
-n1 = 1;
-printf("%li, %li, ", n1, n2);
-for (i = 2; i < 50; i++)
-{
-fib = n2 + n1;
-if (i == 49)
-{
-printf("%li", fib);
-}
-else
-{
-printf("%li, ", fib);
-}
-n1 = n2;
-n2 = fib;
-}
-putchar('\n');
+	long i, n1, n2, fib;
+	n2 = 2;
+	n1 = 1;
+	printf("%li, %li, ", n1, n2);
+	for (i = 2; i < 50; i++)
+	{
+		fib = n2 + n1;
+		if (i == 49)
+		{
+			printf("%li", fib);
+		}
+		else
+		{
+			printf("%li, ", fib);
+		}
+		n1 = n2;
+		n2 = fib;
+	}
+	putchar('\n');
 }
