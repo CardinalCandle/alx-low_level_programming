@@ -41,5 +41,5 @@ void fibonacci(void)
 		n2 = fib;
 		/*printf("\nFibonacci number %lu is%lu", i, fib);*/
 	}
-	/* printf("\nLast Fibonacci number %lu is%lu", i, fib);*/
+	putchar('\n');
 }
