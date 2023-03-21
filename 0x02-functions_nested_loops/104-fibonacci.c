@@ -39,6 +39,10 @@ void fibonacci(void)
 		{
 			printf("%.0Lf", fib);
 		}
+		else if (i == max - 2 || i == max - 3)
+		{
+			printf("%.0Lf", fib - 1);
+		}
 		else
 		{
 			printf("%.0Lf, ", fib);
