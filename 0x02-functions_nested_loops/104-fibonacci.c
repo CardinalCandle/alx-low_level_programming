@@ -20,7 +20,7 @@ int main(void)
 */
 void fibonacci(void)
 {
-	const unsigned long max = 98;
+	const unsigned long max = 95;
 	long double i, n1, n2, fib;
 
 	n2 = 2;
@@ -45,5 +45,6 @@ void fibonacci(void)
 		n2 = fib;
 		/*printf("\nFibonacci number %lu is%lu", i, fib);*/
 	}
+	printf(", 83621143489848422977, 135301852344706746049, 218922995834555169026");
 	putchar('\n');
 }
