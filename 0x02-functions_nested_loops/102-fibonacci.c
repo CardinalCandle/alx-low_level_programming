@@ -21,6 +21,7 @@ int main(void)
 void fibonacci(void)
 {
 	long i, n1, n2, fib;
+
 	n2 = 2;
 	n1 = 1;
 	printf("%li, %li, ", n1, n2);
