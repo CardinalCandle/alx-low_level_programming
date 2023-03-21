@@ -51,6 +51,6 @@ void fibonacci(void)
 		n2 = fib;
 		/*printf("\nFibonacci number %lu is%lu", i, fib);*/
 	}
-	printf(", %.0d%.0d, %.0d%.0d, %.0d%.0d", c1, c2, d1, d2, e1, e2);
+	printf(", %.0Lf%.0Lf, %.0Lf%.0Lf, %.0Lf%.0Lf", c1, c2, d1, d2, e1, e2);
 	putchar('\n');
 }
