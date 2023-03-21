@@ -1,14 +1,5 @@
 #include <stdio.h>
-#include <main.h>
-/**
-* main - Entry point
-* Return: 0
-*/
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
+void print_alphabet(void);
 
 /**
 * print_alphabet - prints lowercase alphabet using putchar
@@ -17,11 +8,22 @@ int main(void)
 */
 void print_alphabet(void)
 {
-	char i = 'a';
+char i = 'a';
 
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		putchar(i);
-	}
-	putchar('\n');
+for (i = 'a'; i <= 'z'; i++)
+{
+putchar(i);
 }
+putchar('\n');
+}
+
+/**
+* main - Entry point
+* Return: 0
+*/
+int main(void)
+{
+print_alphabet();
+return (0);
+}
+
