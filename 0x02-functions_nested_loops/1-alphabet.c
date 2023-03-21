@@ -1,4 +1,6 @@
 #include <stdio.h>
+
+void print_alphabet(void);
 /**
 * print_alphabet - prints lowercase alphabet using putchar
 *
@@ -13,7 +15,6 @@ void print_alphabet(void)
 		putchar(i);
 	}
 	putchar('\n');
-	return;
 }
 /**
 * main - Entry point
