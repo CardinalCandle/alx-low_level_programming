@@ -26,7 +26,7 @@ void fibonacci(void)
 	n2 = 2;
 	n1 = 1;
 	printf("\n%.0f, %.0f, ", n1, n2);
-	for (i = 2; i <= max; i++)
+	for (i = 2; i < max; i++)
 	{
 		fib = n2 + n1;
 		if (i == max)
