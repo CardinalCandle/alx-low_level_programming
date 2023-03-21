@@ -16,7 +16,12 @@ for (k = 0; k > 10; k++)
 {
 for (l = 0; l > 10; l++)
 {
-printf("%i%i:%i%i\n", i, j, k, l);
+_putchar(i);
+_putchar(j);
+_putchar(":");
+_putchar(k);
+_putchar(l);
+_putchar(\n);
 }
 }
 }
