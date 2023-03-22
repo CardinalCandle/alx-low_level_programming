@@ -1,0 +1,51 @@
+#!/bin/bash
+#
+# Fixes SOME OF THE ERRORS in files that have been flagged with errors according to
+# betty's style guide
+#
+# How to use : 	do a chmod u+x on this file and then call it from the command line
+# 		with ./bocchi followed by the name of the file you want to fix, the
+#		script will create a new file named exactly like the input file but
+#		with a .lnt extension, you can then call betty on the fixed file and
+#		change the filename as you see fit for you to pass the checker, change
+#		your original filename to filename.bak or something before, so you
+#		don't accidentally remove it.
+#
+# N.B.:	You are welcome to share some of the limitations of the script you've found,
+#	don't think this will work everytime or I will be liable for any accidents or
+#	any misuse whatsoever of it, I am not responsible, You have been warned.
+#	Also, I made it in like 15 min when I was sleep deprived, give me a break.
+#
+cat $1 \
+| sed 's/[[:space:]]*$//' \
+| sed 's/\s*/ /' \
+| sed 's/\*return/*Return/' \
+| sed 's/^\*.*return/*Return/' \
+| sed 's/^\*Main/*main/' \
+| sed 's/^\*Main/*main/'\
+| sed 's/^\*.*Main/*main/' \
+| sed 's/^\s\t/\t/' \
+| sed 's/\t\s/\t/' \
+| sed 's/\n\n/\n/' \
+| sed 's/\t\n\t\n/\n/' \
+| sed 's/^\s//' \
+| sed 's/{$/\n{\n/' \
+| sed 's/}$/\n}/' \
+| sed 's/[[:space:]]*$//' \
+| sed 's/\s;$/;/' \
+| sed 's/return(/return (/'\
+| sed 's/\n\n/\n/' \
+| sed 's/^\*Main/*main/' \
+| sed 's/return.*:/Return:/' \
+| sed 's/eturn\s:/eturn:/' \
+| sed 's/\s*;/;/' \
+| sed 's/;\s*/;/'\
+| sed 's/return\s*(/return (/' \
+| sed 's/(\s*/(/' \
+| sed 's/\s*)/)/' \
+| sed  's/\/\/\(.*\)/\/\*\1\*\//'\
+| sed  's/^\*.*[Mm][Aa][Ii][Nn]/* main/' \
+| sed 's/^\*.*[Rr][Ee][Tt][Uu][Rr][Nn]/* Return:/' \
+| sed 's/^\*.*main$/* main - Entry point/' \
+| sed 's/\*.*[Rr][Ee][Tt][Uu][Rr][Nn]\:$/* Return: 0/' > $1.lnt
+echo "done, fixed file is $1.lnt"
