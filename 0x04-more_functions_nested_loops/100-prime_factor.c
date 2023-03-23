@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
-*
-*
+* main - entry point
+* Return: 0
 */
 int main(void)
 {
-long long int n = 612852475143;
+unsigned long n = 612852475143;
 int i, r;
 
 for (i = 2 ; i < n ; i++)
@@ -17,5 +17,4 @@ n = n / i;
 }
 printf("%lli\n", n);
 return 0;
-
 }
