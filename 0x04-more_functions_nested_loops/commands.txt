@@ -1,0 +1,331 @@
+/alx-low_level_programming/0x04-more_functions_nested_loops
+
+====================
+0-isupper.c:
+#include "main.h"
+/**
+* _isupper - similar ro isupper function in std library
+* @c: integer
+* Return: 1 if true, 0 otherwise
+*/
+int _isupper(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	else
+	{
+	return (0);
+	}
+}
+====================
+main.h:
+#ifndef MAIN_H
+#define MAIN_H
+#include <stdio.h>
+int _isupper(int c);
+int _isdigit(int c);
+int mul(int a, int b);
+int _putchar(char);
+void print_numbers(void);
+void print_most_numbers(void);
+void more_numbers(void);
+void print_line(int n);
+void print_diagonal(int n);
+void print_square(int size);
+void print_triangle(int size);
+void print_number(int n);
+#endif
+====================
+1-isdigit.c:
+#include "main.h"
+/**
+* _isdigit - similar to isdigit function in std library
+* @c: integer
+* Return: 1 if true, 0 otherwise
+*/
+int _isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+====================
+2-mul.c:
+#include "main.h"
+
+/**
+* mul - multiplies two integers and returns their product
+* @a: first int
+* @b: second int
+* Return: product of both values
+*/
+
+int mul(int a, int b)
+{
+	return (a * b);
+}
+====================
+3-print_numbers.c:
+#include "main.h"
+
+/**
+* print_numbers - prints numbers from 0 to 9
+* Return: void
+*/
+void print_numbers(void)
+{
+	int i;
+
+	for (i = '0'; i <= '9'; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
+}
+====================
+4-print_most_numbers.c:
+#include "main.h"
+
+/**
+* print_most_numbers - prints numbers from 0 to 9, 2 and 4 excluded
+* Return: void
+*/
+void print_most_numbers(void)
+{
+int i;
+
+for (i = '0'; i <= '9'; i++)
+{
+	if ((i == '2') || (i == '4'))
+	{
+	}
+	else
+	{
+	_putchar(i);
+	}
+}
+_putchar('\n');
+}
+====================
+5-more_numbers.c:
+#include "main.h"
+
+/**
+* more_numbers - prints 10 times the numbers, from 0 to 14,
+* followed by a new line.
+* Return: void
+*/
+void more_numbers(void)
+{
+	int i, j, k;
+
+	for (i = '0'; i <= '9'; i++)
+	{
+		for (j = '0'; j < '2'; j++)
+		{
+			for (k = '0'; k <= '9'; k++)
+			{
+				if (j == '1')
+				{
+					if (k >= '5')
+					{
+						break;
+					}
+					_putchar(j);
+				}
+				_putchar(k);
+			}
+		}
+		_putchar('\n');
+	}
+}
+====================
+6-print_line.c:
+#include "main.h"
+/**
+* print_line - draws a straight line in the terminal.
+* @n: integer
+* Return: void
+*/
+void print_line(int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		_putchar('_');
+	}
+	_putchar('\n');
+}
+====================
+7-print_diagonal.c:
+#include "main.h"
+/**
+* print_diagonal - draws a diagonal line in the terminal.
+* @n: integer
+* Return: void
+*/
+void print_diagonal(int n)
+{
+	int i, j;
+
+	if (n <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < i; j++)
+		{
+			_putchar(' ');
+		}
+		_putchar('\\');
+		_putchar('\n');
+	}
+}
+====================
+8-print_square.c:
+#include "main.h"
+/**
+* print_square - prints a square, followed by a new line.
+* @size: size of the square
+* Return: void
+*/
+void print_square(int size)
+{
+	int i, j;
+
+	if (size <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
+	for (i = 0; i < size; i++)
+	{
+		for (j = 0; j < size; j++)
+		{
+			_putchar('#');
+		}
+		_putchar('\n');
+	}
+}
+====================
+9-fizz_buzz.c:
+#include <stdio.h>
+/**
+* main - Entry point
+* Return: 0
+*/
+int main(void)
+{
+	int i;
+
+	for (i = 1; i <= 100; i++)
+	{
+		if ((i % 3 == 0) && (i % 5 == 0))
+		{
+			printf("FizzBuzz");
+		}
+		else if (i % 3 == 0)
+		{
+			printf("Fizz");
+		}
+		else if (i % 5 == 0)
+		{
+			printf("Buzz");
+		}
+		else
+		{
+			printf("%i", i);
+		}
+		if (i != 100)
+		{
+			printf(" ");
+		}
+	}
+	putchar('\n');
+	return (0);
+}
+====================
+10-print_triangle.c:
+#include "main.h"
+
+/**
+* print_triangle - prints a triangle, followed by a new line.
+* @size: size of the triangle
+* Return: void
+*/
+void print_triangle(int size)
+{
+	int i, s, p;
+
+	if (size <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
+	for (i = 0; i < size; i++)
+	{
+		for (s = size - 1 ; s > i; s--)
+		{
+			_putchar(32);
+		}
+		for (p = 0; p <= i; p++)
+		{
+			_putchar(35);
+		}
+		_putchar('\n');
+	}
+}
+====================
+100-prime_factor.c:
+#include <stdio.h>
+/**
+* main - entry point
+* Return: 0
+*/
+int main(void)
+{
+	unsigned long n = 612852475143, i;
+
+	for (i = 2 ; i < n ; i++)
+	{
+		while (n % i == 0)
+		{
+			n = n / i;
+		}
+	}
+	printf("%lu\n", n);
+	return (0);
+}
+====================
+101-print_number.c:
+#include "main.h"
+/**
+* print_number - prints an integer.
+* @n: integer to print.
+* Return: void
+*/
+void print_number(int n)
+{
+	unsigned int m = n;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		m = -m;
+	}
+	if (m >= 10)
+	{
+		print_number(m / 10);
+	}
+	_putchar(m % 10 + '0');
+}
