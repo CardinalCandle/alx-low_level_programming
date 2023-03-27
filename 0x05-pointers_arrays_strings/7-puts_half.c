@@ -12,6 +12,7 @@ void puts_half(char *str)
 
 int len = strlen(str);
 int middle = len / 2;
+int i = middle;
 
 if (len % 2 == 1)
 
@@ -21,7 +22,7 @@ middle += 1;
 
 }
 
-for (int i = middle; i < len; i++)
+for (; i < len; i++)
 
 {
 
