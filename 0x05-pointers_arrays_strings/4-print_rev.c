@@ -13,5 +13,4 @@ void print_rev(char *s)
 		_putchar(s[c--]);
 	}
 	_putchar('\n');
-	_putchar('\0');
 }
