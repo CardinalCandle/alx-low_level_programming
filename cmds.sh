@@ -7,7 +7,7 @@ echo "" >> $file
 
 for i in $(ls *.c *.h | sort -h)
 do
-printf '=%.0s' {1..80} >> $file
+printf '=%.0s' {1..72} >> $file
 printf '\n' >> $file
 echo "---$i:" >> $file
 cat $i >> $file
