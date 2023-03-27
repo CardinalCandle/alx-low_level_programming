@@ -7,7 +7,7 @@
 */
 int _atoi(char *s)
 {
-	long  i, res = 0;
+	double  i, res = 0;
 	char sign = '+';
 
 	if (strlen(s) <= 0)
