@@ -18,9 +18,10 @@ int main(void)
         c = pass[i] + '0';
         putchar(c);
 	/*
-	* The 2772 comes from the crackme binary disassembled,
-	* the checksum function only validates passwords whose
-	* values are summed to exactly 2772 in ASCII code.
+	* The 2772 comes from the hexadecimal value 0xad4 from the
+	* crackme disassembled binary, the checksum function only
+	* validates passwords whose values are summed to exactly
+	* 2772 in ASCII code.
 	*/
         if ((2772 - sum) - '0' < 78)
         {
