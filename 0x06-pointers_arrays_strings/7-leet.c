@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- *
- *
- */
+* leet - do thing
+* @str: str
+* Return: str
+*/
 char *leet(char *str)
 {
 	int i, j;
@@ -20,6 +21,5 @@ char *leet(char *str)
 			}
 		}
 	}
-	return str;
+	return (str);
 }
-

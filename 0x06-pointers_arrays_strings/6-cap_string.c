@@ -8,7 +8,8 @@ char *cap_string(char *str)
 {
 	int i = 0;
 	int cap_next = 1; /* capitalize next character */
-	while (str[i] != '\0')
+
+		while (str[i] != '\0')
 	{
 		if (cap_next && isalpha(str[i]))
 		{
