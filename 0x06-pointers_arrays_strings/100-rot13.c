@@ -1,26 +1,27 @@
 #include "main.h"
-/**
-* rot13 - do thing
-* @str: str
-* Return: str
-*/
-char *rot13(char *str)
-{
-	int i;
-	char ch;
 
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		ch = str[i];
-		if ((ch >= 'a' && ch <= 'm') || (ch >= 'A' && ch <= 'M'))
-		{
-			ch += 13;
-		}
-		else if ((ch >= 'n' && ch <= 'z') || (ch >= 'N' && ch <= 'Z'))
-		{
-			ch -= 13;
-		}
-		str[i] = ch;
-	}
-	return (str);
+/**
+ * rot13 - do thing.
+ * @s: string
+ * Return: pointer to string
+ */
+
+char *rot13(char *s)
+{
+    int i, j;
+    char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+    for (i = 0; s[i]; i++)
+    {
+        for (j = 0; input[j]; j++)
+        {
+            if (s[i] == input[j])
+            {
+                s[i] = output[j];
+                break;
+            }
+        }
+    }
+    return (s);
 }
