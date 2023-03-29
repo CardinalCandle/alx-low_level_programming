@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
 * rot13 - do thing
 * @str: str
 * Return: str
@@ -22,5 +22,5 @@ char *rot13(char *str)
 		}
 		str[i] = ch;
 	}
-	return str;
+	return (str);
 }
