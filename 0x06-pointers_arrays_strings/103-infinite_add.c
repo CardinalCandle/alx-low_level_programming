@@ -1,51 +1,42 @@
 #include "main.h"
-
+#include <string.h>
+#include <stdio.h>
 /**
-* infinite_add - do thing
-*@n1:first number to be added
-*@n2:second number to be added
-*@r: store result
-*@size_r: size of buffer
-*Return:returns pointer to result
-*/
+ * infinite_add - adds two numbers
+ * @n1: number one.
+ * @n2: number two.
+ * @r: buffer that the function will use to store the result.
+ * @size_r: buffer size:
+ * Return: the pointer to dest.
+ */
+char *infinite_add(char *n1, char *n2, char *r, int size_r) {
+    int carry = 0;
+    int len1 = strlen(n1), len2 = strlen(n2);
+    int len = len1 > len2 ? len1 : len2;
 
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
-{
+    if (len + 1 > size_r) return 0;
+
+    r[len+1] = '\0';
+    while (len--) {
+        int digit1 = len1 > 0 ? n1[--len1] - '0' : 0;
+        int digit2 = len2 > 0 ? n2[--len2] - '0' : 0;
+        int sum = digit1 + digit2 + carry;
+
+        if (sum >= 10) {
+            carry = 1;
+            sum -= 10;
+        } else {
+            carry = 0;
+        }
+
+        r[len+1] = sum + '0';
+    }
+
+    if (carry) {
+        r[0] = '1';
+        return r;
+    } else {
+        return r+1;
+    }
 }
 
-/**
-* add_strings - do thing
-* @n1: The string containing the first number to be added.
-* @n2: The string containing the second number to be added.
-* @r: The buffer to store the result.
-* @r_index: The current index of the buffer.
-* Return: a ptr
-*/
-
-char *add_strings(char *n1, char *n2, char *r, int r_index)
-{
-	int num, tens = 0;
-
-	for (; *n1 && *n2; n1--, n2--, r_index--)
-	{
-		num = (*n1 - '0') + (*n2 - '0');
-		num += tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
-	}
-
-	for (; *n1; n1--; r_index++)
-	{
-		num = *(n1 - '0') + tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
-	}
-
-	for (; *n2; n2--;  r_index--)
-	{
-		num = (*n2 - '0') + tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
-	}
-
-}
