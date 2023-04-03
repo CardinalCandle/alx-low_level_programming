@@ -2,7 +2,7 @@
 /**
 * print_diagsums - do thing
 * @a: int
-* @b: int
+* @size: int
 * Return: nothin'
 */
 void print_diagsums(int *a, int size)
@@ -13,7 +13,7 @@ void print_diagsums(int *a, int size)
 	{
 		res1 += a[i];
 	}
-	for (i = size -1; i < size * size - 1; i += size - 1)
+	for (i = size - 1; i < size * size - 1; i += size - 1)
 	{
 		res2 += a[i];
 	}
