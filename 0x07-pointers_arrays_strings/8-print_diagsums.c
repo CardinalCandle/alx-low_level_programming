@@ -1,8 +1,9 @@
 #include "main.h"
 /**
-*
-*
-*
+* print_diagsums - do thing
+* @a: int
+* @b: int
+* Return: nothin'
 */
 void print_diagsums(int *a, int size)
 {
