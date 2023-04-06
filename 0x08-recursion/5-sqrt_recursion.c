@@ -5,7 +5,7 @@ int _sqrt_recurse(int n, int i)
         {
                 return (i);
         }
-        else if (i <= 0)
+        else if (i <= 1)
         {
                 return (-1);
         }
