@@ -2,6 +2,7 @@
 /**
 * main - entry
 * @argv: a
+* @argc: int
 * Return: 0
 */
 int main(int argc, char *argv[])
