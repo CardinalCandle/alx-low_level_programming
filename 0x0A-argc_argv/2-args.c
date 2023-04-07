@@ -7,15 +7,11 @@
 */
 int main(int argc, char __attribute__ ((unused)) *argv[])
 {
-	if (argc <= 1)
+	int i;
+
+	while (i < argc)
 	{
-		return (0);
-	}
-	else
-	{
-	argv++;
-	printf("%s\n", *argv);
-	main(argc - 1, argv);
+		printf("%s\n", argv[i++]);
 	}
 	return (0);
 }
