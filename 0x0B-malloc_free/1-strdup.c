@@ -7,13 +7,18 @@
 */
 char *_strdup(char *str)
 {
-	int i = 0, len = strlen(str);
-	char *new = malloc(sizeof(char)  * (len  + 1));
+	int i, len;
+	char *new;
 
 	if (str == NULL || *str == '\0')
 	{
 		return (NULL);
 	}
+
+	i = 0;
+	len = strlen(str);
+	new = malloc(sizeof(char) * (len + 1));
+
 	if (new)
 	{
 		while (i < len)
