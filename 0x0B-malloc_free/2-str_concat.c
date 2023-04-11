@@ -1,7 +1,9 @@
 #include "main.h"
 /**
-*
-*
+* str_concat - do thing
+* @s1: str
+* @s2: str
+* Return: concated str
 */
 char *str_concat(char *s1, char *s2)
 {
@@ -19,10 +21,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		j = 0;
 		i = 0;
-		while(i < len1)
+		while (i < len1)
 			cat[j++] = s1[i++];
 		i = 0;
-		while(i < len2)
+		while (i < len2)
 			cat[j++] = s2[i++];
 		cat[j] = '\0';
 		return (cat);
