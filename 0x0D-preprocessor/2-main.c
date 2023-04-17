@@ -1,12 +1,10 @@
 #include <stdio.h>
 /**
 * main - entry point
-* @argc: int
-* @argv: str
 * Return: 0
 */
-int main(int argc, char *argv)
+int main(void)
 {
-	printf("%s", argv[0]);
+	printf("%s\n", __FILE__);
 	return (0);
 }
