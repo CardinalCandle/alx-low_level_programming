@@ -1,7 +1,10 @@
 #include "dog.h"
 /**
-*
-*
+* new_dog - do thing
+* @name: name
+* @age: float
+* @owner: string
+* Return: NULL or struct
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
