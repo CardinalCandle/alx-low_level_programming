@@ -1,8 +1,9 @@
 #include "3-calc.h"
 /**
- *
- *
- *
+ * main - entry
+ * @argc: int
+ * @argv: args
+ * Return: 0
  */
 int main(int argc, char **argv)
 {

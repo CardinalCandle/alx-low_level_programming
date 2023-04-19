@@ -1,13 +1,12 @@
 #include "3-calc.h"
 /**
- *
- *
- *
+ * get_op_func - do thing
+ * @s: string
+ * Return: 0 or something else
  */
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ops[] =
-	{
+	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
