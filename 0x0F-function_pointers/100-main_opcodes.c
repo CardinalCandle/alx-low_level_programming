@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
- *
- *
+ * main - entry
+ * @argc: int
+ * @argv: args
+ * Return: 0, 1, or 2.
  */
 int main(int argc, char **argv)
 {
@@ -31,5 +32,5 @@ int main(int argc, char **argv)
 		i++;
 	}
 	putchar('\n');
-	return(0);
+	return (0);
 }
