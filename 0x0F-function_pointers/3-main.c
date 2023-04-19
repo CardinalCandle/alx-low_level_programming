@@ -23,9 +23,9 @@ int main(int argc, char **argv)
 	exit(99);
 	}
 
-	if (op != '+' && op != '-' && op != '*' && op != '/' && op != '%')
+	if (*op != '+' && *op != '-' && *op != '*' && *op != '/' && *op != '%')
 	{
-		return (NULL);
+		return (0);
 	}
 
 	printf("%d\n", get_op_func(op)(a, b));
