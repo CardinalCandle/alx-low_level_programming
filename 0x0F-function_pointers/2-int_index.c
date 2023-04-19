@@ -4,6 +4,7 @@
  * @array: array
  * @size: array size
  * @cmp: function
+ * Return: index or -1
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
