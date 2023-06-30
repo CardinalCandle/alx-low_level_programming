@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * premain - pre main
+ * premain - premain
  */
 void __attribute__((constructor)) premain()
 {
