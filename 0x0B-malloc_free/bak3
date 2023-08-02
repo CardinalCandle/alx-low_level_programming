@@ -1,0 +1,78 @@
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+char **strtow(char *str)
+{
+int j, i;
+char *p;
+char **words;
+char *start;
+int word_count, in_word;
+    if (str == NULL || *str == '\0') {
+        return NULL;
+    }
+
+    /* Count the number of words in the string*/
+    word_count = 0;
+    in_word = 0;
+    for (p = str; *p != '\0'; p++) {
+        if (isspace(*p)) {
+            in_word = 0;
+        } else {
+            if (!in_word) {
+                word_count++;
+                in_word = 1;
+            }
+        }
+    }
+
+    /* Allocate memory for the array of words */
+    words = malloc((word_count + 1) * sizeof(char *));
+    if (words == NULL) {
+        return NULL;
+    }
+    memset(words, 0, (word_count + 1) * sizeof(char *));
+
+    /* Copy each word into a new string*/
+    start = NULL;
+    i = 0;
+    for (p = str; *p != '\0'; p++) {
+        if (isspace(*p)) {
+            if (start != NULL) {
+                *p = '\0';
+                words[i] = strdup(start);
+                if (words[i] == NULL) {
+                    for (j = 0; j < i; j++) {
+                        free(words[j]);
+                    }
+                    free(words);
+                    return NULL;
+                }
+                i++;
+                start = NULL;
+            }
+        } else {
+            if (start == NULL) {
+                start = p;
+            }
+        }
+    }
+    if (start != NULL) {
+        words[i] = strdup(start);
+        if (words[i] == NULL) {
+            for (j = 0; j < i; j++) {
+                free(words[j]);
+            }
+            free(words);
+            return NULL;
+        }
+        i++;
+    }
+
+    /* Add a NULL pointer to the end of the array*/
+    words[i] = NULL;
+
+    return words;
+}
+
