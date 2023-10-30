@@ -1,5 +1,5 @@
-#ifndef main.h
-#define main.h
+#ifndef ALX
+#define ALX
 
 #define NCHAR 1024
 #define ERR_RETURN -1
